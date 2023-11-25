@@ -36,7 +36,7 @@ async fn delete_ticket(
     State(mc): State<ModelController>,
     Path(id): Path<u64>,
 ) -> Result<Json<Ticket>> {
-    println!(">>> {:15} - delete_ticket", "HANDLER");
+    println!(">>> {:12} - delete_ticket", "HANDLER");
 
     let ticket = mc.delete_ticket(id).await?;
 

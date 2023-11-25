@@ -10,7 +10,7 @@ pub fn routes() -> Router {
 }
 
 async fn api_login(cookies: Cookies, payload: Json<LoginPayload>) -> Result<Json<Value>> {
-    println!("->>  {:12} - api_login", "HANDLER");
+    println!("->> {:12} - api_login", "HANDLER");
 
     if payload.username != "demo1" || payload.pwd != "welcome" {
         return Err(Error::LoginFail);
